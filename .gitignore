@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+lsp-server/node_modules/
+vscode-extension/node_modules/
+vscode-extension/lsp-server/
+
+# npm
+*.tgz
+package-lock.json
+lsp-server/package-lock.json
+
+# vscode extension build artifacts
+*.vsix
+
+# editor
+.DS_Store

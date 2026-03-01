@@ -1,0 +1,41 @@
+{
+  "name": "js-qualified-keywords-vscode",
+  "displayName": "Clojure Keywords",
+  "description": "LSP support for Clojure-style qualified keywords (:ns/name) in JavaScript and TypeScript files.",
+  "version": "0.1.0",
+  "publisher": "YOUR_PUBLISHER_ID",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "clojure",
+    "keyword",
+    "javascript",
+    "typescript",
+    "lsp"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./extension.js",
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "cp -r ../lsp-server ./lsp-server && cp -r ../lib ./lsp-server/lib && npm install --prefix ./lsp-server",
+    "package": "vsce package",
+    "clean": "rm -rf ./lsp-server"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.24.0",
+    "@types/vscode": "^1.85.0"
+  }
+}

@@ -1,0 +1,11 @@
+# Dev tooling
+node_modules/
+tests/
+examples/
+editors/
+vscode-extension/
+.babelrc
+
+# LSP server dependencies — users install these themselves via `cd lsp-server && npm install`
+lsp-server/node_modules/
+lsp-server/package-lock.json

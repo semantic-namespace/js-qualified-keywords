@@ -1,0 +1,51 @@
+{
+  "name": "js-qualified-keywords",
+  "version": "0.1.1",
+  "description": "Clojure-style qualified keywords (:ns/name) as a first-class data type in JavaScript, with Babel plugin and LSP support.",
+  "keywords": [
+    "clojure",
+    "keyword",
+    "babel-plugin",
+    "lsp",
+    "data-types"
+  ],
+  "homepage": "https://github.com/semantic-namespace/js-qualified-keywords#readme",
+  "bugs": {
+    "url": "https://github.com/semantic-namespace/js-qualified-keywords/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semantic-namespace/js-qualified-keywords.git"
+  },
+  "license": "MIT",
+  "main": "runtime/index.js",
+  "exports": {
+    ".": "./runtime/index.js",
+    "./runtime": "./runtime/index.js",
+    "./babel-plugin": "./babel-plugin/index.js"
+  },
+  "files": [
+    "runtime/",
+    "babel-plugin/",
+    "lib/",
+    "lsp-server/server.js",
+    "lsp-server/start.sh",
+    "lsp-server/package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node tests/scan.test.js && node tests/babel-plugin.test.js && node tests/runtime.test.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@babel/core": {
+      "optional": true
+    }
+  }
+}
